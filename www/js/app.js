@@ -9,7 +9,7 @@
   'use strict';
   angular.module('billid', ['ionic', 'billid.controllers', 'billid.services', 'billidpoc'])
   .constant('ENVIRONMENT', 'STAGING')
-  .constant('BASE_URL', '')
+  .constant('BASE_URL', 'https://billid-poc-api.herokuapp.com')
   .run(function($ionicPlatform) {
     $ionicPlatform.ready(function() {
       // Hide the accessory bar by default (remove this to show the accessory bar above the keyboard
