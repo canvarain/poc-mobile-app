@@ -54,3 +54,9 @@ $ionicons-font-path: "../lib/ionic/fonts" !default;
 .text-center {
   text-align: center
 }
+
+.card {
+  .row.card-footer {
+    background: $stable;
+  }
+}

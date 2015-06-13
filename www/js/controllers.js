@@ -35,15 +35,15 @@
 
   }]);
 
-  controllers.controller('ReceiptsController', ['$scope', function($scope) {
-
+  controllers.controller('ReceiptsController', ['$scope', 'myReceipts', function($scope, myReceipts) {
+    $scope.receipts = myReceipts;
   }]);
   controllers.controller('ReceiptDetailController', ['$scope', function($scope) {
 
   }]);
 
-  controllers.controller('NotificationsController', ['$scope', '$cordovaPush', '$cordovaDialogs', '$cordovaMedia', '$cordovaToast', 'Profile',
-    function($scope, $cordovaPush, $cordovaDialogs, $cordovaMedia, $cordovaToast, Profile){
+  controllers.controller('NotificationsController', ['$scope', '$cordovaPush', '$cordovaDialogs', '$cordovaMedia', '$cordovaToast', 'Profiles',
+    function($scope, $cordovaPush, $cordovaDialogs, $cordovaMedia, $cordovaToast, Profiles){
 
       //Register
       $scope.register = function(){
@@ -51,7 +51,7 @@
 
           if(ionic.Platform.isAndroid()) {
             config = {
-              "senderID" : "463296801248"
+              "senderID" : "billid-mobile-poc-app"
             };
           } else if(ionic.Platform.isIOS()) {
             config = {
@@ -165,7 +165,7 @@
         Profiles.removeDevice($scope.regId)
           .then(
               function(result){
-                console.log("Token stored, device is successfully subscribed to receive push notifications.");
+                console.log("Token removed, device is successfully unsubscribed.");
               },
               function(reason ){
                 console.log("Error storing device token." + reson )

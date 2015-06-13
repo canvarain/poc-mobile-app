@@ -1,5 +1,14 @@
 <ion-view view-title="Receipts">
   <ion-content>
-    
+    <ion-item data-ng-click="showDetail(ticket)" class="no-border no-padding card" data-ng-repeat="receipt in receiptsList">
+      <div class="row card-header">
+        <div class="col col-67">
+          <p><strong>{{receipt.orgId}}</strong></p>
+        </div>
+        <div class="col col-33">
+          <p class="text-right text-small">{{receipt.amount}}</p>
+        </div>
+      </div>
+    </ion-item>
   </ion-content>
 </ion-view>

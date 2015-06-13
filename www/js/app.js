@@ -43,6 +43,11 @@
     })
     .state('app.receipts', {
       url: "/receipts",
+      resolve: {
+        myReceipts: function(Receipts) {
+          return Receipts.me();
+        }
+      },
       views: {
         'menuContent': {
           templateUrl: "templates/receipts.html",
