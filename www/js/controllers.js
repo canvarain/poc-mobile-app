@@ -7,9 +7,10 @@
 (function() {
   'use strict';
   var controllers = angular.module('billid.controllers', []);
-  controllers.controller('AppController', ['$scope', function($scope) {
 
+  controllers.controller('AppController', ['$scope', function($scope) {
   }]);
+
   controllers.controller('LoginController', ['$scope', '$state', 'Auth', function($scope, $state, Auth) {
     $scope.login = function(credentials) {
       $scope.error = false;
@@ -29,9 +30,11 @@
       }
     }
   }]);
+
   controllers.controller('RegisterController', ['$scope', function($scope) {
 
   }]);
+
   controllers.controller('ReceiptsController', ['$scope', function($scope) {
 
   }]);

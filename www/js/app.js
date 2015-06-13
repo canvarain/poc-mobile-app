@@ -30,6 +30,11 @@
       templateUrl: "templates/login.html",
       controller: 'LoginController'
     })
+    .state('register', {
+      url: '/register',
+      templateUrl: "templates/register.html",
+      controller: 'RegisterController'
+    })
     .state('app', {
       url: "/app",
       abstract: true,
