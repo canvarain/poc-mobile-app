@@ -7,7 +7,7 @@
  */
 (function() {
   'use strict';
-  angular.module('billid', ['ionic', 'billid.controllers', 'billid.services', 'billidpoc'])
+  angular.module('billid', ['ionic', 'ngCordova','billid.controllers', 'billid.services', 'billidpoc'])
   .constant('ENVIRONMENT', 'STAGING')
   .constant('BASE_URL', 'https://billid-poc-api.herokuapp.com')
   .run(function($ionicPlatform) {
@@ -30,11 +30,6 @@
       templateUrl: "templates/login.html",
       controller: 'LoginController'
     })
-    .state('register', {
-      url: '/register',
-      templateUrl: "templates/login.html",
-      controller: 'RegisterController'
-    })
     .state('app', {
       url: "/app",
       abstract: true,
@@ -56,6 +51,15 @@
         'menuContent': {
           templateUrl: "templates/receiptDetail.html",
           controller: 'ReceiptDetailController'
+        }
+      }
+    })
+    .state('app.notifications', {
+      url: "/notifications",
+      views: {
+        'menuContent': {
+          templateUrl: "templates/notifications.html",
+          controller: "NotificationsController"
         }
       }
     });
