@@ -28,8 +28,11 @@
       <label class="item item-input">
         <input data-ng-model="user.mobileNumber" type="text" placeholder="Mobile Number" required>
       </label>
-      <label class="item item-input">
-        <input data-ng-model="user.countryCode" type="text" placeholder="Country Code" required>
+      <label class="item item-input item-select">
+        <div class="input-label">Country</div>
+        <select data-ng-model="user.countryCode">
+          <option selected="selected" value="+91">India</option>
+        </select>
       </label>
       <label class="item item-input">
         <input data-ng-model="user.email" type="email" placeholder="Email" required>
