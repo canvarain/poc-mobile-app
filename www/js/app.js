@@ -10,7 +10,7 @@
   angular.module('billid', ['ionic', 'ngCordova','billid.controllers', 'billid.services', 'billidpoc'])
   .constant('ENVIRONMENT', 'STAGING')
   .constant('BASE_URL', 'https://billid-poc-api.herokuapp.com')
-  .run(function($ionicPlatform) {
+  .run(function($ionicPlatform, Auth, $state) {
     $ionicPlatform.ready(function() {
       // Hide the accessory bar by default (remove this to show the accessory bar above the keyboard
       // for form inputs)
@@ -20,6 +20,10 @@
       if (window.StatusBar) {
         // org.apache.cordova.statusbar required
         StatusBar.styleDefault();
+      }
+      // if user is authenticated go to receipts
+      if(Auth.isAuthenticated()) {
+        $state.go('app.receipts');
       }
     });
   })
@@ -55,8 +59,13 @@
         }
       }
     })
-    .state('app.receipts.detail', {
-      url: "/:id",
+    .state('app.receiptDetail', {
+      url: "/receipt/:id",
+      resolve: {
+        receipt: function(Receipts, $stateParams) {
+          return Receipts.get($stateParams.id);
+        }
+      },
       views: {
         'menuContent': {
           templateUrl: "templates/receiptDetail.html",
@@ -64,12 +73,12 @@
         }
       }
     })
-    .state('app.notifications', {
-      url: "/notifications",
+    .state('app.settings', {
+      url: "/settings",
       views: {
         'menuContent': {
-          templateUrl: "templates/notifications.html",
-          controller: "NotificationsController"
+          templateUrl: "templates/settings.html",
+          controller: 'SettingsController'
         }
       }
     });

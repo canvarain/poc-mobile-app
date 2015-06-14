@@ -7678,6 +7678,12 @@ a.button {
 .no-border {
   border: none; }
 
+.no-padding {
+  padding: 0; }
+
+.no-margin {
+  margin: 0; }
+
 .login .logo {
   margin-top: 30px;
   margin-bottom: 30px; }
@@ -7691,3 +7697,15 @@ a.button {
   margin-bottom: 10px; }
 .login .auth-form .item.item-input:last-child {
   margin-bottom: 0; }
+
+.text-danger {
+  color: #ff0000; }
+
+.text-center {
+  text-align: center; }
+
+.pull-right {
+  float: right !important; }
+
+.card .row.card-footer {
+  background: #f8f8f8; }

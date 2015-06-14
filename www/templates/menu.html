@@ -3,7 +3,6 @@
     <ion-nav-bar class="bar-stable">
       <ion-nav-back-button>
       </ion-nav-back-button>
-
       <ion-nav-buttons side="left">
         <button class="button button-icon button-clear ion-navicon" menu-toggle="left">
         </button>
@@ -14,17 +13,17 @@
 
   <ion-side-menu side="left">
     <ion-header-bar class="bar-stable">
-      <h1 class="title">Left</h1>
+      <h1 class="title">{{profile.firstName}} {{profile.lastName}}</h1>
     </ion-header-bar>
     <ion-content>
       <ion-list>
         <ion-item menu-close href="#/app/receipts">
           Receipts
         </ion-item>
-        <ion-item menu-close href="#/app/notifications">
-          Notifications
+        <ion-item menu-close href="#/app/settings">
+          Settings
         </ion-item>
-        <ion-item menu-close href="logout()">
+        <ion-item menu-close data-ng-click="logout()">
           Logout
         </ion-item>
       </ion-list>

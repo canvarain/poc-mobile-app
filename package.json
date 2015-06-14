@@ -33,13 +33,21 @@
     "cordova-plugin-file",
     "cordova-plugin-media",
     {
-      "locator": "https://github.com/phonegap-build/PushPlugin",
-      "id": "com.phonegap.plugins.PushPlugin"
-    },
-    {
       "locator": "https://github.com/EddyVerbruggen/Toast-PhoneGap-Plugin.git",
       "id": "nl.x-services.plugins.toast"
+    },
+    "cordova-plugin-whitelist",
+    "org.apache.cordova.console",
+    "org.apache.cordova.dialogs",
+    "org.apache.cordova.file",
+    "org.apache.cordova.media",
+    {
+      "locator": "https://github.com/phonegap-build/PushPlugin.git",
+      "id": "com.phonegap.plugins.PushPlugin"
     }
   ],
-  "cordovaPlatforms": []
+  "cordovaPlatforms": [
+    "ios",
+    "android"
+  ]
 }
