@@ -61,7 +61,7 @@
 
   controllers.controller('SettingsController', ['$scope', 'Registration', 'Logger', '$cordovaToast', function($scope, Registration, Logger, $cordovaToast){
     $scope.settings = {
-      enableNotification: true
+      enableNotification: false
     };
     $scope.saveSettings = function(settings) {
       if(settings.enableNotification) {
