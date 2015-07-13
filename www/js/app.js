@@ -7,7 +7,7 @@
  */
 (function() {
   'use strict';
-  angular.module('billid', ['ionic', 'ngCordova','billid.controllers', 'billid.services', 'billidpoc'])
+  angular.module('billid', ['ionic', 'angularMoment', 'rn-lazy', 'ngCordova','billid.controllers', 'billid.services', 'billid.filters', 'billidpoc'])
   .constant('ENVIRONMENT', 'STAGING')
   .constant('BASE_URL', 'https://billid-poc-api.herokuapp.com')
   .run(function($ionicPlatform, Auth, $state) {

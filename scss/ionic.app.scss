@@ -17,10 +17,13 @@ $dark:                            #444 !default;
 
 // The path for our ionicons font files, relative to the built CSS in www/css
 $ionicons-font-path: "../lib/ionic/fonts" !default;
+$positive: #F44D6A;
 
 // Include all of Ionic
 @import "www/lib/ionic/scss/ionic";
 $danger: #ff0000;
+
+
 .no-border {
   border: none;
 }
@@ -33,13 +36,13 @@ $danger: #ff0000;
 
 .login {
   .logo {
-    margin-top: 30px;
+    margin-top: 80px;
     margin-bottom: 30px;
     img {
-      display: block;
       margin-right: auto;
       margin-left: auto;
-      height: 80px;
+      display: block;
+      height: 120px;
       width: 200px;
     }
   }
@@ -58,13 +61,46 @@ $danger: #ff0000;
 }
 
 .text-center {
-  text-align: center
+  text-align: center;
 }
+
 .pull-right {
   float: right !important;
 }
+
 .card {
   .row.card-footer {
     background: $stable;
+  }
+}
+
+.logo-container {
+  min-height: 40px;
+  background-size: cover;
+  background-position: center;
+  margin-bottom: 10px;
+}
+
+.address {
+  p {
+    font-size: 0.9em;
+  }
+}
+
+.info {
+  font-size: 0.9em !important;
+}
+
+.receipt-item {
+  p{
+    font-size: 0.8em !important;
+  }
+}
+
+
+.receipt-item-footer {
+  background : $positive;
+  p {
+    color: $light;
   }
 }

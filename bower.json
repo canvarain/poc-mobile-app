@@ -2,10 +2,16 @@
   "name": "billid",
   "private": "true",
   "devDependencies": {
-    "ionic": "driftyco/ionic-bower#1.0.0"
+    "ionic": "driftyco/ionic-bower#1.0.0",
+    "angular-moment": "~0.10.1"
   },
   "dependencies": {
     "poc-services": "git@github.com:billidin/poc-services.git",
-    "ngCordova": "~0.1.17-alpha"
+    "ngCordova": "~0.1.17-alpha",
+    "rn-lazy": "*",
+    "angular-moment": "~0.10.1"
+  },
+  "resolutions": {
+    "angular": "1.4.2"
   }
 }
