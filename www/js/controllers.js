@@ -51,8 +51,7 @@
     $scope.receiptsList = myReceipts;
 
     $scope.showDetail = function(receipt) {
-      var result = $state.go('app.receiptDetail', { id: receipt.id });
-      console.log(result);
+      $state.go('app.receiptDetail', { id: receipt.id });
     };
   }]);
   controllers.controller('ReceiptDetailController', ['$scope', 'receipt', function($scope, receipt) {

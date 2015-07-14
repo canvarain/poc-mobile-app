@@ -22,9 +22,9 @@
    * the date format is hard coded as of now for the poc purposes
    */
   filters.filter('formattedDateFromObjectId', ['$filter', function($filter){
-	return function(oid) {
-		var dt = $filter('dateFromObjectId')(oid);
-		return $filter('amDateFormat')(dt, 'dddd, MMMM Do YYYY, h:mm:ss a');
-	}
+  return function(oid) {
+    var dt = $filter('dateFromObjectId')(oid);
+    return $filter('amDateFormat')(dt, 'dddd, MMMM Do YYYY, h:mm:ss a');
+  }
   }]);
 }(ionic));

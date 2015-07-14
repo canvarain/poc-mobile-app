@@ -6,20 +6,20 @@
           <h2>{{receipt.organization.name}}</h2>
             <p class="address">
             <p class="text-left">{{receipt.organization.streetAddress}}</p>
-	          <p class="text-left">{{receipt.organization.city}}, {{receipt.organization.state}}</p>
-	          <p class="info">
-		          <span class="ion-clock">
-		            <span am-time-ago="{{receipt.id | dateFromObjectId}}"></span>
+            <p class="text-left">{{receipt.organization.city}}, {{receipt.organization.state}}</p>
+            <p class="info">
+              <span class="ion-clock">
+                <span am-time-ago="{{receipt.id | dateFromObjectId}}"></span>
               </span>
-	          </p>
+            </p>
         </div>
         <div class="col col-33">
           <div class="loading logo-container"
-          		rn-lazy-background="'///placehold.it/100x50&text=STORE'"
-          		rn-lazy-loading-class="loading"
-          		rn-lazy-loaded-class="loaded">
+              rn-lazy-background="'http://placehold.it/100x50&text=STORE'"
+              rn-lazy-loading-class="loading"
+              rn-lazy-loaded-class="loaded">
           </div>
-		      <h2>{{receipt.amount | currency: "INR "}}</h2>
+          <h2>{{receipt.amount | currency: "INR "}}</h2>
         </div>
       </div>
     </ion-item>
